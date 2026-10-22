@@ -1,0 +1,23 @@
+{
+  "name": "Nexa Meet — Secure Video Conferencing, Private by Default",
+  "short_name": "Nexa Meet",
+  "description": "Nexa Meet is a privacy-first video conferencing platform: encrypted-in-transit calls, temporary rooms, no recording and no meeting history. Free to start.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf9f5",
+  "theme_color": "#faf9f5",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

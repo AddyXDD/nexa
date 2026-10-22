@@ -1,0 +1,1 @@
+import{j as r,d as u}from"./index-499sz1sv.js";import{l as i,s as m}from"./prefs-ChzjLNNK.js";import{r as n}from"./react-vendor-DzeyujRg.js";const e="admin-token";function d(){const[s,a]=n.useState(()=>i(e,null)),t=n.useCallback(o=>{a(o),m(e,o)},[]);return{token:s,store:t}}function f(s){return r(u.adminAuth.session,s===null?"skip":{token:s})}export{f as a,d as u};

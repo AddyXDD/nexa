@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Nexa Meet">
+  <defs>
+    <radialGradient id="tile" cx="47%" cy="40%" r="80%">
+      <stop offset="0" stop-color="#2f3135" />
+      <stop offset="0.5" stop-color="#1c1e21" />
+      <stop offset="1" stop-color="#0c0d0f" />
+    </radialGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.6" />
+      <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.46" />
+      <stop offset="1" stop-color="#8fa3ff" stop-opacity="0.72" />
+    </linearGradient>
+    <linearGradient id="accent" x1="324" y1="132" x2="368" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="0.42" stop-color="#c6d1f6" />
+      <stop offset="0.75" stop-color="#8b9cf0" />
+      <stop offset="1" stop-color="#6d80e8" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#tile)" />
+  <g fill="#ffffff">
+    <path d="M144 132h44v252h-28a16 16 0 0 1-16-16V132Z" />
+    <path d="M188 132h44l136 252h-44L188 132Z" />
+  </g>
+  <path d="M324 132h26a18 18 0 0 1 18 18v190l-44-82V132Z" fill="url(#accent)" />
+  <rect x="3.5" y="3.5" width="505" height="505" rx="112.5" fill="none" stroke="url(#edge)" stroke-width="3.5" />
+</svg>

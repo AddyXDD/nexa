@@ -1,0 +1,22 @@
+# Nexa Meet — https://www.nexameet.in/
+#
+# Public marketing and legal pages are open to crawlers; account, admin,
+# meeting-room and error surfaces are not indexable content. The canonical
+# host is www — the apex domain 308-redirects here, so the Sitemap line and
+# every entry inside the sitemap use www.
+
+User-agent: *
+Allow: /
+# Rendering assets must stay crawlable.
+Allow: /assets/
+Allow: /logo.svg
+Allow: /logo-maskable.svg
+Allow: /og.png
+
+Disallow: /dashboard
+Disallow: /auth
+Disallow: /admin
+Disallow: /m/
+Disallow: /oauth/
+
+Sitemap: https://www.nexameet.in/sitemap.xml

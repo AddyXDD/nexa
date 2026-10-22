@@ -1,0 +1,644 @@
+/* DO NOT CHANGE */
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:is(.dark *));
+
+/* DO NOT CHANGE */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* CHANGE VALUES FOR THEME */
+:root {
+  --radius: 0.5rem;
+  /* Nexa Meet — quiet warm neutrals, deep jade accent */
+  --background: oklch(0.987 0.004 90);
+  --foreground: oklch(0.19 0.008 265);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.19 0.008 265);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.19 0.008 265);
+  --primary: oklch(0.21 0.008 265);
+  --primary-foreground: oklch(0.987 0.004 90);
+  --secondary: oklch(0.958 0.005 90);
+  --secondary-foreground: oklch(0.21 0.008 265);
+  --muted: oklch(0.958 0.005 90);
+  --muted-foreground: oklch(0.52 0.012 60);
+  --accent: oklch(0.948 0.006 90);
+  --accent-foreground: oklch(0.21 0.008 265);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.918 0.005 90);
+  --input: oklch(0.918 0.005 90);
+  --ring: oklch(0.58 0.12 158);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  /* Brand accent — used sparingly: live states, dots, small highlights */
+  --nexa-accent: oklch(0.55 0.115 158);
+}
+
+.dark {
+  --background: oklch(0.16 0.006 265);
+  --foreground: oklch(0.945 0.004 90);
+  --card: oklch(0.205 0.007 265);
+  --card-foreground: oklch(0.945 0.004 90);
+  --popover: oklch(0.205 0.007 265);
+  --popover-foreground: oklch(0.945 0.004 90);
+  --primary: oklch(0.945 0.004 90);
+  --primary-foreground: oklch(0.16 0.006 265);
+  --secondary: oklch(0.27 0.007 265);
+  --secondary-foreground: oklch(0.945 0.004 90);
+  --muted: oklch(0.27 0.007 265);
+  --muted-foreground: oklch(0.68 0.01 90);
+  --accent: oklch(0.31 0.008 265);
+  --accent-foreground: oklch(0.945 0.004 90);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.7 0.12 158);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+  /* Accent brightens on dark surfaces (dashboard in dark mode) */
+  --nexa-accent: oklch(0.74 0.13 158);
+}
+
+/* Typography — Inter for everything; IBM Plex Mono for codes and IDs */
+:root {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, monospace;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+}
+
+/* ==========================================================================
+   Nexa Meet landing — design-system extras
+   Light paper field, soft color washes, grain, custom cursor, micro-motion.
+   Everything here respects prefers-reduced-motion.
+   ========================================================================== */
+
+/* Selection + focus, scoped to the landing page */
+.nexa-landing {
+  color-scheme: light;
+}
+.nexa-landing ::selection {
+  background: color-mix(in oklab, var(--nexa-accent) 25%, transparent);
+}
+
+/* The landing pins its own light palette — warm paper, deep ink, sapphire
+   accent, generous radii — so the page renders identically whether or not
+   the meeting route has left `html.dark` on the document (that class is a
+   device preference for the room, not for the site). */
+.nexa-landing {
+  --radius: 0.75rem;
+  --background: oklch(0.973 0.005 95);
+  --foreground: oklch(0.23 0.012 262);
+  --card: oklch(0.988 0.003 95);
+  --card-foreground: oklch(0.23 0.012 262);
+  --popover: oklch(0.988 0.003 95);
+  --popover-foreground: oklch(0.23 0.012 262);
+  --primary: oklch(0.24 0.014 262);
+  --primary-foreground: oklch(0.973 0.005 95);
+  --secondary: oklch(0.942 0.006 95);
+  --secondary-foreground: oklch(0.24 0.014 262);
+  --muted: oklch(0.942 0.006 95);
+  --muted-foreground: oklch(0.5 0.014 80);
+  --accent: oklch(0.935 0.008 95);
+  --accent-foreground: oklch(0.24 0.014 262);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.905 0.005 95);
+  --input: oklch(0.905 0.005 95);
+  --ring: oklch(0.47 0.15 252);
+  /* Sapphire — the landing's interactive accent (shared with the room) */
+  --nexa-accent: oklch(0.47 0.15 252);
+}
+
+/* Editorial type for the landing: Fraunces display over IBM Plex Sans.
+   Scoped here so the app (Inter) keeps its own voice. */
+.nexa-landing {
+  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+}
+.nexa-landing h1,
+.nexa-landing h2,
+.nexa-landing h3 {
+  font-family: "Fraunces", ui-serif, Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+.nexa-landing :focus-visible {
+  outline: 2px solid var(--nexa-accent);
+  outline-offset: 2px;
+}
+
+/* Film grain — keeps the gradient field from reading as a flat wash */
+.nexa-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+}
+
+/* Slow drift for the three background fields */
+@keyframes nexa-drift-a {
+  0% { transform: translate3d(-6%, -4%, 0) scale(1); }
+  100% { transform: translate3d(10%, 8%, 0) scale(1.18); }
+}
+@keyframes nexa-drift-b {
+  0% { transform: translate3d(8%, 6%, 0) scale(1.1) rotate(0deg); }
+  100% { transform: translate3d(-8%, -6%, 0) scale(0.95) rotate(8deg); }
+}
+@keyframes nexa-drift-c {
+  0% { transform: translate3d(4%, -8%, 0) scale(0.9); }
+  100% { transform: translate3d(-6%, 10%, 0) scale(1.12); }
+}
+.nexa-drift-a { animation: nexa-drift-a 46s ease-in-out infinite alternate; }
+.nexa-drift-b { animation: nexa-drift-b 62s ease-in-out infinite alternate; }
+.nexa-drift-c { animation: nexa-drift-c 54s ease-in-out infinite alternate; }
+
+/* Marquee band */
+@keyframes nexa-marquee {
+  to { transform: translateX(-50%); }
+}
+.nexa-marquee {
+  animation: nexa-marquee 42s linear infinite;
+}
+.nexa-marquee-host:hover .nexa-marquee {
+  animation-play-state: paused;
+}
+
+/* Custom cursor — the native cursor is only hidden while this class is on
+   <html>, and the component removes it on unmount. */
+html.nexa-cursor-none,
+html.nexa-cursor-none * {
+  cursor: none !important;
+}
+.nexa-cursor-dot,
+.nexa-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 120;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.nexa-cursor-dot > span {
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--nexa-accent);
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.nexa-cursor-ring > span {
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  /* neutral mid-gray stays visible over both the light page and the dark
+     product-shot mock */
+  border: 1px solid oklch(0.52 0.01 90 / 0.75);
+  transition:
+    transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.32s ease,
+    background-color 0.32s ease;
+}
+.nexa-cursor-ring.is-hover > span {
+  transform: scale(1.45);
+  border-color: color-mix(in oklab, var(--nexa-accent) 80%, transparent);
+  background: color-mix(in oklab, var(--nexa-accent) 10%, transparent);
+}
+.nexa-cursor-ring.is-down > span {
+  transform: scale(0.72);
+}
+.nexa-cursor-dot.is-hover > span {
+  transform: scale(0.5);
+}
+
+/* Soft floating bob — hero annotation chips */
+@keyframes nexa-bob {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+.nexa-bob {
+  animation: nexa-bob 6s ease-in-out infinite;
+}
+.nexa-bob-slow {
+  animation: nexa-bob 8.5s ease-in-out infinite;
+}
+
+/* Underline that draws in from the left on hover (nav, text links) */
+.nexa-underline {
+  background-image: linear-gradient(var(--nexa-accent), var(--nexa-accent));
+  background-repeat: no-repeat;
+  background-size: 0% 1.5px;
+  background-position: left center;
+  transition:
+    background-size 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.2s ease;
+}
+.nexa-underline:hover,
+.nexa-underline:focus-visible {
+  background-size: 100% 1.5px;
+}
+
+/* Meeting-mock micro-motion (hero illustration) */
+@keyframes nexa-pulse-ring {
+  0%, 100% { box-shadow: 0 0 0 1px color-mix(in oklab, var(--nexa-accent) 60%, transparent); }
+  50% { box-shadow: 0 0 0 3px color-mix(in oklab, var(--nexa-accent) 25%, transparent); }
+}
+.nexa-pulse {
+  animation: nexa-pulse-ring 2.4s ease-in-out infinite;
+}
+@keyframes nexa-wave {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+.nexa-wave span {
+  display: block;
+  width: 2px;
+  height: 14px;
+  border-radius: 1px;
+  background: var(--nexa-accent);
+  transform-origin: bottom;
+  animation: nexa-wave 1.1s ease-in-out infinite;
+}
+@keyframes nexa-float-up {
+  0% { transform: translateY(6px) scale(0.9); opacity: 0; }
+  18% { opacity: 1; }
+  100% { transform: translateY(-64px) scale(1.06); opacity: 0; }
+}
+.nexa-float-emoji {
+  animation: nexa-float-up 3.2s ease-out infinite;
+}
+
+/* Review slider progress line */
+@keyframes nexa-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+.nexa-progress {
+  transform-origin: left;
+  animation: nexa-progress 6s linear forwards;
+}
+.nexa-progress-host.is-paused .nexa-progress {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .nexa-drift-a,
+  .nexa-drift-b,
+  .nexa-drift-c,
+  .nexa-marquee,
+  .nexa-bob,
+  .nexa-bob-slow,
+  .nexa-pulse,
+  .nexa-wave span,
+  .nexa-float-emoji,
+  .nexa-progress {
+    animation: none !important;
+  }
+}
+
+/* ==========================================================================
+   Meeting room — stage surfaces & micro-motion
+   The room keeps its own dark palette: a deep, neutral stage (video is the
+   color),quiet hairlines, and one accent. Every state it highlights is
+   also carried by text or an icon.
+   ========================================================================== */
+
+/* The room always renders dark, regardless of the landing's light theme or
+   the device preference — a dark stage keeps focus on camera feeds. */
+/*
+ * The room's material system:
+ *
+ *   ink    — the media stage. Near-black graphite so video is the only colour.
+ *   bone   — the instrument chrome (ribbon + console). Warm paper, ink type,
+ *            the surface of something machined rather than another glass bar.
+ *   signal — one acid lime. Live dots, the speaking ring, active states, the
+ *            join button. Never a gradient, never decorative.
+ *
+ * The chrome is a light scope so the same token-driven children (menus,
+ * tooltips, badges) render as paper without per-component colour overrides.
+ */
+
+.nexa-room {
+  color-scheme: dark;
+  --radius: 0.85rem;
+  --background: oklch(0.135 0.01 265);
+  --foreground: oklch(0.955 0.006 92);
+  --card: oklch(0.19 0.009 265);
+  --card-foreground: oklch(0.955 0.006 92);
+  --popover: oklch(0.2 0.01 265);
+  --popover-foreground: oklch(0.955 0.006 92);
+  --primary: oklch(0.955 0.006 92);
+  --primary-foreground: oklch(0.16 0.01 265);
+  --secondary: oklch(0.245 0.01 265);
+  --secondary-foreground: oklch(0.955 0.006 92);
+  --muted: oklch(0.245 0.01 265);
+  --muted-foreground: oklch(0.69 0.012 92);
+  --accent: oklch(0.27 0.012 265);
+  --accent-foreground: oklch(0.955 0.006 92);
+  --destructive: oklch(0.64 0.21 25);
+  --border: oklch(0.29 0.012 265);
+  --input: oklch(0.29 0.012 265);
+  --ring: oklch(0.85 0.19 118);
+  /* Signal lime on the dark stage; ink type on top of it. */
+  --nexa-accent: oklch(0.87 0.19 118);
+  --nexa-accent-ink: oklch(0.2 0.02 118);
+  /* Chrome materials */
+  --nexa-bone: oklch(0.938 0.012 92);
+  --nexa-bone-strong: oklch(0.908 0.014 90);
+  --nexa-ink: oklch(0.165 0.012 265);
+  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+/*
+ * Light instrument chrome. Every token-driven control inside it (menus,
+ * tooltips, kbd hints, badges) becomes paper-on-ink automatically — the
+ * console and ribbon are the only light surfaces in the room, which is what
+ * makes them read as hardware rather than as another translucent overlay.
+ */
+.nexa-chrome {
+  color-scheme: light;
+  --background: oklch(0.938 0.012 92);
+  --foreground: oklch(0.165 0.012 265);
+  --card: oklch(0.965 0.01 92);
+  --card-foreground: oklch(0.165 0.012 265);
+  --popover: oklch(0.975 0.008 92);
+  --popover-foreground: oklch(0.165 0.012 265);
+  --primary: oklch(0.165 0.012 265);
+  --primary-foreground: oklch(0.938 0.012 92);
+  --secondary: oklch(0.9 0.014 90);
+  --secondary-foreground: oklch(0.165 0.012 265);
+  --muted: oklch(0.9 0.014 90);
+  --muted-foreground: oklch(0.44 0.016 80);
+  --accent: oklch(0.885 0.014 90);
+  --accent-foreground: oklch(0.165 0.012 265);
+  --border: oklch(0.83 0.014 88);
+  --input: oklch(0.83 0.014 88);
+  --ring: oklch(0.52 0.16 120);
+  --destructive: oklch(0.5 0.2 25);
+  /* Deep olive for type/icons on paper; bright lime stays for fills and dots. */
+  --nexa-accent: oklch(0.52 0.16 120);
+  --nexa-signal: oklch(0.85 0.19 118);
+  --nexa-ink: oklch(0.165 0.012 265);
+  --nexa-bone: oklch(0.938 0.012 92);
+}
+
+/* Editorial display type for room headings, as on the landing. */
+.nexa-room h1,
+.nexa-room h2,
+.nexa-room h3 {
+  font-family: "Fraunces", ui-serif, Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+/* Ambient daylight. The stage picks up a faint wash of the local hour —
+   warmer at dawn and dusk, cooler at midday, deep blue at night — so a room
+   feels like it belongs to the time of day it is happening in. It is tint,
+   never lighting: a few percent, layered behind the video. */
+.nexa-room {
+  --nexa-ambient: oklch(0.72 0.12 252);
+}
+.nexa-room[data-daypart="dawn"] {
+  --nexa-ambient: oklch(0.74 0.1 55);
+}
+.nexa-room[data-daypart="day"] {
+  --nexa-ambient: oklch(0.72 0.1 205);
+}
+.nexa-room[data-daypart="dusk"] {
+  --nexa-ambient: oklch(0.7 0.1 320);
+}
+.nexa-room[data-daypart="night"] {
+  --nexa-ambient: oklch(0.72 0.12 252);
+}
+
+/* The pre-join / status field: the same ink, no tile grid. */
+.nexa-room-bg {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(
+      110% 55% at 50% 0%,
+      color-mix(in oklab, var(--nexa-ambient) 10%, transparent) 0%,
+      transparent 62%
+    ),
+    radial-gradient(
+      80% 45% at 50% 105%,
+      color-mix(in oklab, var(--nexa-ambient) 5%, transparent) 0%,
+      transparent 70%
+    ),
+    linear-gradient(oklch(0.18 0.008 258), oklch(0.145 0.008 258));
+}
+
+/* Micro-label: the instrument-panel voice used across the chrome. */
+.nexa-label {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Live / connected dot. */
+@keyframes nexa-live {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+.nexa-live {
+  animation: nexa-live 2.2s ease-in-out infinite;
+}
+
+/* Speaking equalizer — three bars in the nameplate, lime on ink. */
+@keyframes nexa-eq {
+  0%,
+  100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+.nexa-eq {
+  display: flex;
+  height: 9px;
+  align-items: flex-end;
+  gap: 2px;
+}
+.nexa-eq > span {
+  display: block;
+  width: 2px;
+  height: 9px;
+  border-radius: 1px;
+  background: var(--nexa-accent);
+  transform-origin: bottom;
+  animation: nexa-eq 0.9s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nexa-live,
+  .nexa-eq > span {
+    animation: none !important;
+  }
+}
+
+/* ================================================================== *
+ * THE STUDIO
+ *
+ * The in-room surface is not an app window with a toolbar bolted to it.
+ * It is three pieces of furniture:
+ *
+ *   spine    — a vertical strip of instruments down the left edge: brand,
+ *              the live mic fader, device keys, tools, and the exit key.
+ *   masthead — a typeset line at the top: who, where, how long, how secure.
+ *              No card, no shadow; ink and bone type on a hairline rule.
+ *   wall     — an edge-to-edge surface of video plates, divided by hairline
+ *              joints, captioned with little paper tabs like a gallery.
+ *
+ * Paper is where you read and write (the desk sheet); ink is where you
+ * watch. That inversion is the whole language of the room.
+ * ================================================================== */
+
+.nexa-display {
+  font-family: "Fraunces", ui-serif, Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+.nexa-studio {
+  background-color: oklch(0.118 0.008 262);
+}
+
+/* The instrument spine: flat ink, separated by one hairline. */
+.nexa-spine {
+  background-color: oklch(0.124 0.008 262);
+  border-right: 1px solid oklch(1 0 0 / 0.07);
+}
+
+/* The masthead is a typeset rule, not a surface: one step lighter than the
+   spine, one hairline beneath. No gradient, no shadow. */
+.nexa-masthead {
+  background-color: oklch(0.137 0.008 262);
+  border-bottom: 1px solid oklch(1 0 0 / 0.07);
+}
+
+/* The wall: flat near-black. The plates and their joints are the structure. */
+.nexa-wall {
+  background-color: #08090b;
+}
+
+/* One video plate: square, with a single hairline edge. Nothing else. */
+.nexa-plate {
+  background-color: #101115;
+  box-shadow: inset 0 0 0 1px oklch(1 0 0 / 0.045);
+}
+
+/* The caption: a small strip of bone paper on the plate. The only raised
+   surface on the wall, which is why it reads as a label and not a card. */
+.nexa-tab {
+  background: var(--nexa-bone);
+  color: var(--nexa-ink);
+  box-shadow:
+    0 1px 0 oklch(0 0 0 / 0.35),
+    0 8px 16px -14px oklch(0 0 0 / 0.9);
+}
+.nexa-tab[data-live="true"] {
+  background: var(--nexa-accent);
+  color: var(--nexa-accent-ink);
+}
+.nexa-tab[data-live="true"] .nexa-eq > span {
+  background: var(--nexa-accent-ink);
+}
+
+/* Live mic fader in the spine: lit segments against unlit ones. */
+.nexa-fader span {
+  transition: background-color 90ms linear;
+}

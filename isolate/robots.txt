@@ -1,0 +1,13 @@
+# Nexa — https://nexameet.in/
+# Public marketing and legal pages are open to crawlers; account, admin,
+# meeting-room and auth surfaces are not indexable content.
+
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /auth
+Disallow: /admin
+Disallow: /m/
+Disallow: /oauth/
+
+Sitemap: https://nexameet.in/sitemap.xml

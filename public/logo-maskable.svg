@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Nexa Meet">
+  <defs>
+    <linearGradient id="accent" x1="290" y1="168" x2="336" y2="366" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="0.42" stop-color="#c6d1f6" />
+      <stop offset="0.75" stop-color="#8b9cf0" />
+      <stop offset="1" stop-color="#6d80e8" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="#191b1e" />
+  <g fill="#ffffff">
+    <path d="M110 168h44v252h-28a16 16 0 0 1-16-16V168Z" />
+    <path d="M154 168h44l136 252h-44L154 168Z" />
+  </g>
+  <path d="M290 168h26a18 18 0 0 1 18 18v190l-44-82V168Z" fill="url(#accent)" />
+</svg>

@@ -1,0 +1,60 @@
+# Packaging for the Nexa Meet desktop app.
+#
+# The app ships two things: the compiled Electron entry point in
+# desktop/dist, and the built web app in dist/. Nothing else — no node
+#_modules are bundled, because the main process only uses Electron's own
+# built-ins and the "electron" module is provided at runtime.
+
+appId: app.nexameet.desktop
+productName: Nexa Meet
+copyright: © 2026 Nexa
+
+directories:
+  output: release
+  buildResources: build
+
+files:
+  - desktop/dist/**/*
+  - package.json
+
+# The built web app travels beside the app, not inside asar, because the
+# custom nexa:// protocol reads it from disk.
+extraResources:
+  - from: dist
+    to: dist
+    filter:
+      - "**/*"
+
+protocols:
+  - name: Nexa Meet
+    schemes:
+      - nexa
+  - name: Nexa Meet (web)
+    schemes:
+      - nexameet
+
+mac:
+  category: public.app-category.productivity
+  target:
+    - dmg
+    - zip
+  # Unsigned builds are still produced — handy locally — but CI must pass
+  # signing credentials or the build should be treated as throwaway.
+  identity: null
+
+win:
+  target:
+    - nsis
+  signingHashAlgorithms:
+    - sha256
+
+linux:
+  category: Network
+  target:
+    - AppImage
+    - deb
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true

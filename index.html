@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content" />
+  <meta name="description" content="Nexa Meet is a privacy-first video conferencing platform: encrypted-in-transit calls, temporary rooms, no recording and no meeting history. Free to start." />
+  <meta name="theme-color" content="#faf9f5" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- The canonical host is www: the apex domain 308-redirects here, so every
+       canonical URL, OG URL and sitemap entry uses www.nexameet.in.
+       Per-route tags are corrected after mount by useSeo (src/lib/seo.ts);
+       these static values describe the homepage. -->
+  <link rel="canonical" href="https://www.nexameet.in/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Nexa Meet" />
+  <meta property="og:url" content="https://www.nexameet.in/" />
+  <meta property="og:title" content="Nexa Meet — Secure Video Conferencing, Private by Default" />
+  <meta
+    property="og:description"
+    content="Nexa Meet is a privacy-first video conferencing platform: encrypted-in-transit calls, temporary rooms, no recording and no meeting history. Free to start."
+  />
+  <meta property="og:image" content="https://www.nexameet.in/og.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Nexa Meet — private video meetings" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nexa Meet — Secure Video Conferencing, Private by Default" />
+  <meta
+    name="twitter:description"
+    content="Nexa Meet is a privacy-first video conferencing platform: encrypted-in-transit calls, temporary rooms, no recording and no meeting history. Free to start."
+  />
+  <meta name="twitter:image" content="https://www.nexameet.in/og.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <title>Nexa Meet — Secure Video Conferencing, Private by Default</title>
+
+  <!-- Site-wide entities. Kept here rather than injected per route so the
+       plain HTML carries them for crawlers and social scrapers that never run
+       JavaScript; route-specific schema (SoftwareApplication, BreadcrumbList)
+       is added after mount and never duplicates these. -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.nexameet.in/#organization",
+      "name": "Nexa Meet",
+      "alternateName": "Nexa",
+      "url": "https://www.nexameet.in/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.nexameet.in/#logo",
+        "url": "https://www.nexameet.in/logo.svg",
+        "contentUrl": "https://www.nexameet.in/logo.svg",
+        "width": 512,
+        "height": 512
+      },
+      "image": { "@id": "https://www.nexameet.in/#logo" },
+      "email": "support@nexameet.in",
+      "description": "Nexa Meet is a privacy-first video conferencing service built on temporary rooms, anonymous guest identities and peer-to-peer media.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "support@nexameet.in",
+          "availableLanguage": ["English"]
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.nexameet.in/#website",
+      "url": "https://www.nexameet.in/",
+      "name": "Nexa Meet",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://www.nexameet.in/#organization" }
+    }
+  ]
+}
+  </script>
+</head>
+
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

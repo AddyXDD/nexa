@@ -1,0 +1,1 @@
+const n="nexa.";function o(r,t){try{const e=localStorage.getItem(n+r);return e===null?t:{...t,...JSON.parse(e)}}catch{return t}}function a(r,t){try{const e=localStorage.getItem(n+r);return e===null?t:JSON.parse(e)}catch{return t}}function s(r,t){try{localStorage.setItem(n+r,JSON.stringify(t))}catch{}}export{o as a,a as l,s};
